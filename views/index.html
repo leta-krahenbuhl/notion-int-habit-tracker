@@ -1,5 +1,5 @@
 <!-- served from your routes in server.js -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Notion internal integration example" />
 
-    <title>Notion integration demo</title>
+    <title>Habit Tracker</title>
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
 
@@ -16,23 +16,40 @@
   </head>
   <body>
     <header>
-      <h1>Notion internal integration demo</h1>
+      <h1>Habit Tracker Integration</h1>
     </header>
 
     <main>
-      <h2>Goals</h2>
-      <p>
-        Use this demo to see how to incorporate Notion's public API into your
-        app. Build on this demo as needed to meet your own app's requirements!
-      </p>
-      <p>
-        Open the Notion page set in your environment variables to see workspace
-        updates in real-time. :)
-      </p>
       <table>
         <tr>
-          <th>Step</th>
+          <th>Create</th>
           <th>Response</th>
+        </tr>
+        <tr>
+          <td>
+            <h3>1. Create a new weekly habit tracker</h3>
+            <form id="databaseForm">
+              <label for="dbName">Name (eg WC 16th Sep 2024)</label>
+              <input type="text" id="dbName" />
+              <input type="submit" />
+            </form>
+          </td>
+
+          <td id="dbResponse"></td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
+
+<!-- OLD BODY -->
+<!-- <main>
+      <h2>WC 16th September 2024</h2>
+
+      <table>
+        <tr>
+          <th>Habit</th>
+          <th>Amount</th>
         </tr>
         <tr>
           <td>
@@ -43,7 +60,7 @@
               <input type="submit" />
             </form>
           </td>
-          <!-- The database form response will be appended here after submitting it -->
+          
           <td id="dbResponse"></td>
         </tr>
         <tr>
@@ -59,7 +76,7 @@
               <input type="submit" />
             </form>
           </td>
-          <!-- The page form response will be appended here after submitting it -->
+
           <td id="pageResponse"></td>
         </tr>
         <tr>
@@ -73,7 +90,7 @@
               <input type="submit" />
             </form>
           </td>
-          <!-- The page content/blocks form response will be appended here after submitting it -->
+
           <td id="blocksResponse"></td>
         </tr>
         <tr>
@@ -87,10 +104,8 @@
               <input type="submit" />
             </form>
           </td>
-          <!-- The comment form response will be appended here after submitting it -->
+
           <td id="commentResponse"></td>
         </tr>
       </table>
-    </main>
-  </body>
-</html>
+    </main> -->
